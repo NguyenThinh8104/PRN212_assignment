@@ -83,6 +83,12 @@ public partial class MnHospitalContext : DbContext
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .HasColumnName("username");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .HasColumnName("email");
+            entity.Property(e => e.Phone)
+                .HasMaxLength(10)
+                .HasColumnName("phone");
 
             entity.HasOne(d => d.KhoaNavigation).WithMany(p => p.Bacsis)
                 .HasForeignKey(d => d.Khoa)
@@ -139,6 +145,9 @@ public partial class MnHospitalContext : DbContext
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .HasColumnName("username");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .HasColumnName("email");
 
             entity.HasOne(d => d.UsernameNavigation).WithMany(p => p.Benhnhans)
                 .HasForeignKey(d => d.Username)

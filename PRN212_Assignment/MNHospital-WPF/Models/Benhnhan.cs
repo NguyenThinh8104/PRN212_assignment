@@ -20,6 +20,7 @@ public partial class Benhnhan
     public string? Address { get; set; }
 
     public string? Baohiem { get; set; }
+    public string? Email { get; set; }
 
     public virtual ICollection<Datlich> Datliches { get; set; } = new List<Datlich>();
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "csbsYbD/fms=",
+  "dgSpecHash": "xZhwoecA9So=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Documents\\Zalo Received Files\\PRN_Assignment\\MNHospital-WPF-20250325T190627Z-001\\MNHospital-WPF\\MNHospital-WPF.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\GitHub\\PRN212_assignment\\PRN212_Assignment\\MNHospital-WPF\\MNHospital-WPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

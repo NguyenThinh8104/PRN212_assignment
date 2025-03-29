@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MNHospital-WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdd99b14682a98ddf853cc693e683f177b2c6a0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MNHospital-WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MNHospital-WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

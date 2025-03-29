@@ -15,6 +15,9 @@ public partial class Bacsi
 
     public int? Khoa { get; set; }
 
+    public string? Email { get; set; }
+    public string? Phone { get; set; } = null;
+
     public virtual ICollection<Ketqua> Ketquas { get; set; } = new List<Ketqua>();
 
     public virtual Khoakham? KhoaNavigation { get; set; }

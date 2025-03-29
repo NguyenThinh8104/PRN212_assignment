@@ -1,0 +1,46 @@
+﻿<Window x:Class="MNHospital_WPF.Views.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MNHospital_WPF.Views.client"
+        mc:Ignorable="d"
+        Title="Thông Tin Người Dùng " Height="600" Width="600">
+    <Grid Background="#FF2980B9" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Thông Tin Người Dùng" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,10"/>
+
+        <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="20" Margin="10">
+            <StackPanel>
+
+                <TextBlock Text="Họ và tên:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtFullName" Margin="0,5" Height="30"/>
+
+                <TextBlock Text="Số CMND/CCCD:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtIdNumber" Margin="0,5" Height="30"/>
+
+                <TextBlock Text="Giới tính:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <RadioButton x:Name="rbtnMale" Content="Nam" GroupName="Gender" Margin="5"/>
+                    <RadioButton x:Name="rbtnFemale" Content="Nữ" GroupName="Gender" Margin="5"/>
+                    <RadioButton x:Name="rbtnOther" Content="Khác" GroupName="Gender" Margin="5"/>
+                </StackPanel>
+
+                <TextBlock Text="Ngày sinh:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtDob" Margin="0,5" Height="30"/>
+
+                <TextBlock Text="Địa chỉ:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtAddress" Margin="0,5" Height="30"/>
+
+                <TextBlock Text="Thông tin bảo hiểm:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBox x:Name="txtInsurance" Margin="0,5" Height="30"/>
+
+                <Button Content="Save Profile" Margin="0,10" Height="35" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#FF2980B9" Foreground="White"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

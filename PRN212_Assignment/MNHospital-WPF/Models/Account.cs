@@ -9,6 +9,8 @@ public partial class Account
 
     public string? Userpassword { get; set; }
 
+    public string? Email { get; set; }
+
     public int? Role { get; set; }
 
     public virtual ICollection<Bacsi> Bacsis { get; set; } = new List<Bacsi>();
@@ -17,5 +19,5 @@ public partial class Account
 
     public virtual Role? RoleNavigation { get; set; }
 
-    public string? Email { get; set; }
+    
 }

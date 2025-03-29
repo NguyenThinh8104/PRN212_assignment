@@ -51,14 +51,14 @@ namespace MNHospital_WPF.Views
 				MessageBox.Show("Passwords do not match.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 				return;
 			}		
-			if (IsValidEmail(email))
+			if (!IsValidEmail(email))
 			{
 				MessageBox.Show("Invalid email address.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 			using (var context = new MnHospitalContext())
 			{
-				var existingUserByUsername = context.Accounts.SingleOrDefault(u => u.Username == _account.Username);
+                var existingUserByUsername = context.Accounts.SingleOrDefault(u => u.Username == _account.Username);
 				if (existingUserByUsername != null)
 				{
 					MessageBox.Show("Username already exists.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -75,14 +75,18 @@ namespace MNHospital_WPF.Views
 				{
 					Username = _account.Username,					
 					Userpassword  = password,
-					Role  = 3
+                        Email = email,
+                        Role  = 3
 				};
 				ManagerAccount.Instance.AddAccount(newAccount);
 
 				MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 				_isRegistrationSuccessful = true;
-				this.Close();
-			}
+
+                Profile ProfileWindow = new Profile();
+                ProfileWindow.Show();
+                this.Hide();
+            }
 		}
 
 
