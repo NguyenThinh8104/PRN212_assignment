@@ -23,106 +23,114 @@ namespace MNHospital_WPF.Views
     /// </summary>
     public partial class Home : Window
     {
-		private Account _loggedInUser;
-		public Home(Account loggedInUser)
+        private Account _loggedInUser;
+        public Home(Account loggedInUser)
         {
-			_loggedInUser = loggedInUser;
-			InitializeComponent();
-			UpdateLoginState();
+            _loggedInUser = loggedInUser;
+            InitializeComponent();
+            UpdateLoginState();
 
-		}
+        }
 
-		private void BtnLogin_Click(object sender, RoutedEventArgs e)
-		{
-			Login login = new Login();
-			login.Show();
-			this.Hide();
-		}
-		private void UpdateLoginState()
-		{
-			if (_loggedInUser != null)
-			{
-				txtUserName.Visibility = Visibility.Visible;
-				btnLogout.Visibility = Visibility.Visible;
-				btnLogin.Visibility = Visibility.Collapsed;
-				
-				if (_loggedInUser.Role == 1) // Admin
-				{
-					txtUserName.Text = $"Xin chào Admin: {_loggedInUser.Username}";
-					btnManageAppointments.Visibility = Visibility.Visible;
-					btnProfile.Visibility = Visibility.Collapsed;
-					btnAppointmentHistory.Visibility = Visibility.Collapsed;
-					btnBookAppointment.Visibility = Visibility.Collapsed;
-				}
-				else if (_loggedInUser.Role == 2) // Doctor
-				{
-					txtUserName.Text = $"Xin chào Doctor: {_loggedInUser.Username}";
-					btnProfile.Visibility = Visibility.Collapsed;
-					btnAppointmentHistory.Visibility = Visibility.Collapsed;
-					btnBookAppointment.Visibility = Visibility.Collapsed;
-					btnTreatmen.Visibility = Visibility.Visible;
-				}
-				else if (_loggedInUser.Role == 3) // Patient
-				{
-					txtUserName.Text = $"Xin chào Patient: {_loggedInUser.Username}";				
-				}
-			}
-			else
-			{
-				txtUserName.Visibility = Visibility.Collapsed;
-				btnLogout.Visibility = Visibility.Collapsed;
-				btnLogin.Visibility = Visibility.Visible;
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+        private void UpdateLoginState()
+        {
+            if (_loggedInUser != null)
+            {
+                txtUserName.Visibility = Visibility.Visible;
+                btnLogout.Visibility = Visibility.Visible;
+                btnLogin.Visibility = Visibility.Collapsed;
 
-			
-				btnManageAppointments.Visibility = Visibility.Collapsed;
-			}
-		}
+                if (_loggedInUser.Role == 1) // Admin
+                {
+                    txtUserName.Text = $"Xin chào Admin: {_loggedInUser.Username}";
+                    btnManageAppointments.Visibility = Visibility.Visible;
+                    btnProfile.Visibility = Visibility.Collapsed;
+                    btnAppointmentHistory.Visibility = Visibility.Collapsed;
+                    btnBookAppointment.Visibility = Visibility.Collapsed;
+                }
+                else if (_loggedInUser.Role == 2) // Doctor
+                {
+                    txtUserName.Text = $"Xin chào Doctor: {_loggedInUser.Username}";
+                    btnProfile.Visibility = Visibility.Collapsed;
+                    btnAppointmentHistory.Visibility = Visibility.Collapsed;
+                    btnBookAppointment.Visibility = Visibility.Collapsed;
+                    btnTreatmen.Visibility = Visibility.Visible;
+                    btnDoctorProfile.Visibility = Visibility.Visible;
+                }
+                else if (_loggedInUser.Role == 3) // Patient
+                {
+                    txtUserName.Text = $"Xin chào Patient: {_loggedInUser.Username}";
+                }
+            }
+            else
+            {
+                txtUserName.Visibility = Visibility.Collapsed;
+                btnLogout.Visibility = Visibility.Collapsed;
+                btnLogin.Visibility = Visibility.Visible;
 
 
-		private void BtnLogout_Click(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Question);
-			if (result == MessageBoxResult.Yes)
-			{
-			
-				_loggedInUser = null;
-				UpdateLoginState();
+                btnManageAppointments.Visibility = Visibility.Collapsed;
+            }
+        }
 
-			}
-		}
 
-		private void BookAppointment_Click(object sender, RoutedEventArgs e)
-		{
-			Appointment booking = new Appointment(_loggedInUser );
-			booking.Show();
-			this.Hide();
-		}
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
 
-		private void AppointmentHistory_Click(object sender, RoutedEventArgs e)
-		{
-			History booking = new History(_loggedInUser);
-			booking.Show();
-			this.Hide();
-		}
-		private void ListPatient_Click(object sender, RoutedEventArgs e)
-		{
-			ListPatient list = new ListPatient(_loggedInUser);
-			list.Show();
-			this.Hide();
-		}
-		private void ManageAppointments_Click(object sender, RoutedEventArgs e)
-		{
-			ManagerAppoiment booking = new ManagerAppoiment(_loggedInUser);
-			booking.Show();
-			this.Hide();
-		}
+                _loggedInUser = null;
+                UpdateLoginState();
 
-		private void Profile_Click(object sender, RoutedEventArgs e)
-		{
+            }
+        }
 
-			Profile p = new Profile( _loggedInUser);
-			p.Show();
-			this.Hide();
-		}
-	}
+        private void BookAppointment_Click(object sender, RoutedEventArgs e)
+        {
+            Appointment booking = new Appointment(_loggedInUser);
+            booking.Show();
+            this.Hide();
+        }
+
+        private void AppointmentHistory_Click(object sender, RoutedEventArgs e)
+        {
+            History booking = new History(_loggedInUser);
+            booking.Show();
+            this.Hide();
+        }
+        private void ListPatient_Click(object sender, RoutedEventArgs e)
+        {
+            ListPatient list = new ListPatient(_loggedInUser);
+            list.Show();
+            this.Hide();
+        }
+        private void ManageAppointments_Click(object sender, RoutedEventArgs e)
+        {
+            ManagerAppoiment booking = new ManagerAppoiment(_loggedInUser);
+            booking.Show();
+            this.Hide();
+        }
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+
+            Profile p = new Profile(_loggedInUser);
+            p.Show();
+            this.Hide();
+        }
+        private void DoctorProfile_Click(object sender, RoutedEventArgs e)
+        {
+            ProfileDoctor profileDoctor = new ProfileDoctor(_loggedInUser);
+            profileDoctor.Show();
+            this.Hide();
+        }
+
+    }
 }

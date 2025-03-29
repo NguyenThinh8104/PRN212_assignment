@@ -1,26 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MNHospital_WPF.Models;
-
-public partial class Bacsi
+namespace MNHospital_WPF.Models
 {
-    public int Id { get; set; }
+    public partial class Bacsi
+    {
+        public int Id { get; set; }
 
-    public string? Username { get; set; }
+        public string? Username { get; set; }
 
-    public string? Name { get; set; }
+        public string? Name { get; set; }
 
-    public bool Gender { get; set; }
+        public string? Cccd { get; set; }  // Căn cước công dân bác sĩ
 
-    public int? Khoa { get; set; }
+        public string? Gender { get; set; }
 
-    public string? Email { get; set; }
-    public string? Phone { get; set; } = null;
+        public DateOnly? Dob { get; set; }
 
-    public virtual ICollection<Ketqua> Ketquas { get; set; } = new List<Ketqua>();
+        public int? Khoa { get; set; }
 
-    public virtual Khoakham? KhoaNavigation { get; set; }
+        public string? Phone { get; set; } // Số điện thoại bác sĩ
 
-    public virtual Account? UsernameNavigation { get; set; }
+        public string? Specialization { get; set; } // Chuyên môn bác sĩ
+
+        public virtual ICollection<Ketqua> Ketquas { get; set; } = new List<Ketqua>();
+
+        public virtual Khoakham? KhoaNavigation { get; set; }
+
+        public virtual Account? UsernameNavigation { get; set; }
+    }
 }

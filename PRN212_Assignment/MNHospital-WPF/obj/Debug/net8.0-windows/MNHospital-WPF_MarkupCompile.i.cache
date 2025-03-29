@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\DELL\Documents\GitHub\PRN212_assignment\PRN212_Assignment\MNHospital-WPF\obj\Debug\net8.0-windows\
+E:\SWP391_Project\PRN212_assignment\PRN212_Assignment\MNHospital-WPF\obj\Debug\net8.0-windows\
 MNHospital_WPF
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\DELL\Documents\GitHub\PRN212_assignment\PRN212_Assignment\MNHospital-WPF\App.xaml
-12-307528358
+E:\SWP391_Project\PRN212_assignment\PRN212_Assignment\MNHospital-WPF\App.xaml
+14-2066863811
 
-32-872784394
-244-483564071
-Views\admin\AddResult.xaml;Views\admin\ListPatient.xaml;Views\admin\ManagerAppoiment.xaml;Views\admin\UpdateStatusDialog.xaml;Views\client\Appointment.xaml;Views\client\History.xaml;Views\client\Profile.xaml;Views\ForgetPassword.xaml;Views\Home.xaml;Views\Login.xaml;Views\Profile.xaml;Views\Register.xaml;
+3318772667
+244-769206582
+Views\admin\AddResult.xaml;Views\admin\ListPatient.xaml;Views\admin\ManagerAppoiment.xaml;Views\admin\ProfileDoctor.xaml;Views\admin\UpdateStatusDialog.xaml;Views\admin\Window1.xaml;Views\client\Appointment.xaml;Views\client\History.xaml;Views\client\Profile.xaml;Views\ForgetPassword.xaml;Views\Home.xaml;Views\Login.xaml;Views\Profile.xaml;Views\Register.xaml;
 
-False
+True
 

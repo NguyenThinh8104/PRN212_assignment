@@ -16,6 +16,9 @@
     <Compile Update="Views\admin\AddResult.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\admin\ProfileDoctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\admin\UpdateStatusDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

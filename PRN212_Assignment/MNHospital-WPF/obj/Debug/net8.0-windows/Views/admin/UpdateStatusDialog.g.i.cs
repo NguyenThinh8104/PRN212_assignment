@@ -77,7 +77,7 @@ namespace MNHospital_WPF.Views.admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MNHospital-WPF;component/views/admin/updatestatusdialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MNHospital-WPF;V1.0.0.0;component/views/admin/updatestatusdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\admin\UpdateStatusDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

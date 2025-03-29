@@ -169,6 +169,10 @@
           "SelectedChildIndex": 13,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "Benhnhan.cs",
@@ -181,10 +185,6 @@
               "WhenOpened": "2025-03-26T06:06:05.492Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -333,8 +333,8 @@
               "Title": "ForgetPassword.xaml.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\GitHub\\PRN212_assignment\\PRN212_Assignment\\MNHospital-WPF\\Views\\ForgetPassword.xaml.cs",
               "RelativeDocumentMoniker": "MNHospital-WPF\\Views\\ForgetPassword.xaml.cs",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\GitHub\\PRN212_assignment\\PRN212_Assignment\\MNHospital-WPF\\Views\\ForgetPassword.xaml.cs*",
-              "RelativeToolTip": "MNHospital-WPF\\Views\\ForgetPassword.xaml.cs*",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\GitHub\\PRN212_assignment\\PRN212_Assignment\\MNHospital-WPF\\Views\\ForgetPassword.xaml.cs",
+              "RelativeToolTip": "MNHospital-WPF\\Views\\ForgetPassword.xaml.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAiwCYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T17:35:42.023Z",
